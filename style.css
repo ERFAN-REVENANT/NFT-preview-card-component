@@ -11,6 +11,7 @@ body{
     border-radius: 10px;
     padding: 20px;
     line-height: 30px;
+    margin-top: 10vh;
 }
 .pic img{
     height: auto;
