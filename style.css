@@ -13,11 +13,49 @@ body{
     line-height: 30px;
     margin-top: 10vh;
 }
-.pic img{
-    height: auto;
-    width: 225px;
-    border-radius: 10px;
+
+
+/* Container for the image and overlay */
+.pic {
+    position: relative; /* Relative positioning to contain absolutely positioned children */
+    width: 225px; /* Set the width of the container */
 }
+
+/* Image styling */
+.pic img {
+    width: 100%; /* Make the image fill the container */
+    border-radius: 10px; /* Rounded corners for the image */
+    display: block; /* Remove any extra space below the image */
+}
+
+/* Overlay styling */
+.view {
+    position: absolute; /* Absolute positioning within the container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00a6c061; /* Semi-transparent black overlay */
+    border-radius: 10px; /* Match the image's rounded corners */
+    opacity: 0; /* Start with the overlay hidden */
+    display: flex; /* Center the icon */
+    justify-content: center; /* Center the icon */
+    align-items: center; /* Center the icon */
+    transition: opacity 0.3s ease; /* Smooth transition for the overlay */
+}
+
+/* Icon styling (assuming you have an eye icon inside .view) */
+.view img {
+    width: 30px; /* Set the size of the icon */
+    height: 30px; /* Set the size of the icon */
+}
+
+/* Show overlay on hover */
+.pic:hover .view {
+    opacity: 1; /* Show the overlay */
+}
+
+
 .title{
     color: #ffffff;
 }
@@ -26,6 +64,9 @@ body{
     width: 250px;
     font-size: 14px;
     line-height: 20px;
+}
+.title:hover{
+    color: #38f0f3;
 }
 .fee{
     display: flex;
@@ -67,4 +108,8 @@ body{
 .author span{
     color: #ffffff;
     margin-left: 5px;
+}
+
+.author span:hover{
+    color :#38f0f3;
 }
